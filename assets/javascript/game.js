@@ -10,6 +10,7 @@ document.onreadystatechange = function () {
     const WORD_COUNT_ELE = document.getElementById('word-count');
     const LETTERS_GUESSED_ELE = document.getElementById('letters-guessed');
     const INSTRUCTIONS_ELE = document.getElementById('instructions');
+    const CARD_ELE = document.getElementById('card');
 
     // Variables to hold data
     let wordArray = [
@@ -72,7 +73,8 @@ document.onreadystatechange = function () {
 
     // Key listener
     document.addEventListener('keyup', function(event) {
-      INSTRUCTIONS_ELE.style.opacity = '0';
+      INSTRUCTIONS_ELE.style.display = 'none';
+      CARD_ELE.style.marginTop = '50px';
       if(updateLettersGuessed(event.key)) {
         // only gets called if new letter
 
@@ -99,7 +101,8 @@ document.onreadystatechange = function () {
                 AUDIO_ELE.load();
                 AUDIO_ELE.play();
                 alert('Game Over!\nScore: ' + wordsGuessed);
-                INSTRUCTIONS_ELE.style.opacity = '1';
+                INSTRUCTIONS_ELE.style.display = 'block';
+                CARD_ELE.style.marginTop = '0px';
                 wordsGuessed = 0;
                 newWord();
                 WORD_COUNT_ELE.textContent = wordsGuessed;
