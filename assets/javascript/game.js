@@ -129,8 +129,8 @@ document.onreadystatechange = function () {
     }
 
     function checkForWin() {
-      console.log(currentWord);
-      console.log(wordOnScreen);
+      // console.log(currentWord);
+      // console.log(wordOnScreen);
 
       if (currentWord.toString() === wordOnScreen.toString()) {
         let soundIndex = Math.floor(Math.random() * soundPathArray[1].length);
