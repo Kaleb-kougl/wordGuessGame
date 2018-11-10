@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Video Game Hangman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100&effect=neon">
+  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+  <script src="./assets/javascript/game.js"></script>
+</head>
+<body class="text-center font-effect-neon">
+<header class="container-fluid border">Video Game Hangman</header>
+  <article class="card bg-dark text-center col-lg-8">
+    <section class="card-body">
+      <h2 class="card-title" id="instructions">Press any key to get started!</h2>
+      <p class="card-text">
+        Words guessed: <span id="word-count">0</span>
+      </p>
+      <p class="card-text">
+        Current word
+      </p>
+      <p id="current-word"></p>
+      <p>
+        Number of guesses remaining: <span id="turns-remaining">10</span>
+      </p>
+      <audio id="audio">
+          <source id='audio-src' src='./assets/audio/smb3_game_over.wav' type="audio/wav">
+      </audio>
+    </section>
+    <div class="card-footer ">
+      Letters already guessed: <span id="letters-guessed"></span>
+    </div>
+  </article>
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
